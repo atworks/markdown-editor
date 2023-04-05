@@ -1,0 +1,12 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "description": "markdown editor",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo `Hello! package.json`",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
