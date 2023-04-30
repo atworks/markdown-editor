@@ -15,7 +15,11 @@ const config = {
   },
   devServer: {
     open: true,
+    hot: true,
     host: "localhost",
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
   },
   plugins: [
     // Add your plugins here
