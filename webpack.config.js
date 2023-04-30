@@ -10,7 +10,7 @@ const stylesHandler = "style-loader";
 const config = {
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "index.js",
   },
   devServer: {
@@ -18,7 +18,7 @@ const config = {
     hot: true,
     host: "localhost",
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, "docs"),
     },
   },
   plugins: [
