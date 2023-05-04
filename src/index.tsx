@@ -1,7 +1,14 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { createGlobalStyle } from "styled-components";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { Editor } from "./pages/editor";
+import { History } from "./pages/history";
 
 const GlobalStyle = createGlobalStyle`
 body * {
@@ -12,7 +19,13 @@ body * {
 const Main = (
   <>
     <GlobalStyle />
-    <Editor />
+    <Router>
+      <Routes>
+        <Route path="/editor" element={<Editor />} />
+        <Route path="/history" element={<History />} />
+        <Route path="*" element={<Navigate to="/editor" replace />} />
+      </Routes>
+    </Router>
   </>
 );
 
